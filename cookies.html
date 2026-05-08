@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Cookies - Servicios Profesionales de Ciberseguridad</title>
+    <meta name="description" content="Información sobre el uso de cookies en nuestros servicios de ciberseguridad profesional.">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #000;
+            overflow-x: hidden;
+            font-family: 'Courier New', monospace;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        h1, h2, h3, p, li {
+            color: #333333;
+            text-shadow: 0 0 5px rgba(51, 51, 51, 0.5);
+        }
+
+        .section {
+            margin-bottom: 30px;
+            background: rgba(51, 51, 51, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            backdrop-filter: blur(5px);
+        }
+
+        .cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(51, 51, 51, 0.95);
+            padding: 20px;
+            text-align: center;
+            z-index: 1000;
+        }
+
+        .cookie-banner p {
+            color: #fff;
+            margin: 0;
+        }
+
+        .cookie-button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            background: #333333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .cookie-button:hover {
+            background: #444444;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <a href="index.html">INICIO</a>
+        <a href="herramientas.html">HERRAMIENTAS</a>
+        <a href="blog.html">BLOG</a>
+        <a href="contacto.html">CONTACTO</a>
+        <a href="faq.html">FAQ</a>
+        <a href="testimonios.html">TESTIMONIOS</a>
+        <a href="precios.html">PRECIOS</a>
+    </div>
+
+    <div class="content">
+        <h1>Política de Cookies</h1>
+
+        <div class="section">
+            <h2>¿Qué son las cookies?</h2>
+            <p>Las cookies son pequeños archivos de texto que se almacenan en su dispositivo cuando visita nuestro sitio web. Son esenciales para el funcionamiento técnico del sitio y para mejorar su experiencia.</p>
+        </div>
+
+        <div class="section">
+            <h2>Tipos de Cookies que Utilizamos</h2>
+            <ul>
+                <li>Cookies técnicas esenciales</li>
+                <li>Cookies de rendimiento y análisis</li>
+                <li>Cookies de preferencias</li>
+                <li>Cookies de seguridad</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Finalidad de las Cookies</h2>
+            <ul>
+                <li>Garantizar el funcionamiento técnico del sitio</li>
+                <li>Mejorar la seguridad de la navegación</li>
+                <li>Analizar el rendimiento del sitio</li>
+                <li>Recordar preferencias de usuario</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Control de Cookies</h2>
+            <p>Puede controlar y/o eliminar las cookies según desee:</p>
+            <ul>
+                <li>Configurar su navegador para rechazar cookies</li>
+                <li>Eliminar cookies existentes</li>
+                <li>Configurar notificaciones de nuevas cookies</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Cookies de Terceros</h2>
+            <p>Utilizamos cookies de terceros para:</p>
+            <ul>
+                <li>Análisis de uso del sitio</li>
+                <li>Medidas de seguridad</li>
+                <li>Funcionalidades técnicas necesarias</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="cookie-banner">
+        <p>Utilizamos cookies para mejorar su experiencia y la seguridad del sitio.</p>
+        <button class="cookie-button" onclick="aceptarCookies()">Aceptar</button>
+        <button class="cookie-button" onclick="rechazarCookies()">Rechazar</button>
+        <a href="cookies.html" class="cookie-button">Más información</a>
+    </div>
+
+    <script>
+        function aceptarCookies() {
+            localStorage.setItem('cookies-aceptadas', 'true');
+            document.querySelector('.cookie-banner').style.display = 'none';
+        }
+
+        function rechazarCookies() {
+            localStorage.setItem('cookies-aceptadas', 'false');
+            document.querySelector('.cookie-banner').style.display = 'none';
+        }
+
+        // Comprobar si ya se han aceptado las cookies
+        window.onload = function() {
+            if (localStorage.getItem('cookies-aceptadas')) {
+                document.querySelector('.cookie-banner').style.display = 'none';
+            }
+        }
+    </script>
+
+    <div class="footer">
+        <p>© 2024 Servicios Profesionales de Ciberseguridad - Todos los derechos reservados</p>
+    </div>
+</body>
+</html> 

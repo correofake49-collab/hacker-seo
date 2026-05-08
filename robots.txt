@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+Allow: /index.html
+Allow: /precios.html
+Allow: /herramientas.html
+Allow: /blog.html
+Allow: /contacto.html
+Allow: /faq.html
+Allow: /testimonios.html
+Allow: /privacidad.html
+Allow: /cookies.html
+Allow: /terminos.html
+
+Sitemap: https://hacker-seo.vercel.app/sitemap.xml
+
+# Optimizado para motores de búsqueda
+# Última actualización: 15 de abril de 2024 

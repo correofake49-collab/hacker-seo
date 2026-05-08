@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - HACKER Ético</title>
+    <meta name="description" content="Contacto directo y seguro para servicios de hacking ético y seguridad informática.">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #000;
+            color: #fff;
+            font-family: 'Courier New', monospace;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background: transparent;
+        }
+
+        .discretion-box {
+            background: rgba(0, 0, 0, 0.95);
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            margin: 20px auto;
+            max-width: 600px;
+            border: 1px solid #333;
+        }
+
+        .discretion-title {
+            color: #ff0000;
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .question-text {
+            color: #fff;
+            font-size: 20px;
+            margin-bottom: 25px;
+        }
+
+        .contact-description {
+            color: #ccc;
+            margin-bottom: 30px;
+        }
+
+        .whatsapp-button {
+            display: inline-block;
+            background: #25D366;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 18px;
+            margin: 20px 0;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-button:hover {
+            background: #128C7E;
+            transform: scale(1.05);
+        }
+
+        .whatsapp-icon {
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+
+        .info-section {
+            background: rgba(0, 0, 0, 0.95);
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 30px;
+            border: 1px solid #333;
+        }
+
+        .info-title {
+            color: #ff0000;
+            font-size: 18px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .info-item {
+            color: #fff;
+            margin: 10px 0;
+            text-align: center;
+        }
+
+        .info-value {
+            color: #00ff00;
+            font-weight: bold;
+        }
+
+        .form-section {
+            background: transparent;
+            border-radius: 10px;
+            padding: 30px;
+            margin: 40px auto;
+            max-width: 600px;
+            box-shadow: none;
+            backdrop-filter: none;
+            border: 1px solid #333;
+        }
+
+        .form-title {
+            color: #007bff;
+            font-size: 24px;
+            margin-bottom: 30px;
+            text-align: center;
+            text-transform: uppercase;
+            font-family: 'Courier New', monospace;
+            text-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            color: #000;
+            margin-bottom: 8px;
+            font-family: 'Courier New', monospace;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #333;
+            border-radius: 5px;
+            background: transparent;
+            color: #000;
+            font-family: 'Courier New', monospace;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #007bff;
+            background: transparent;
+            box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+            color: #000;
+        }
+
+        .submit-button {
+            background: transparent;
+            color: #007bff;
+            padding: 15px 30px;
+            border: 1px solid #007bff;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-family: 'Courier New', monospace;
+            width: 100%;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .submit-button:hover {
+            background: rgba(0, 123, 255, 0.1);
+            border-color: #007bff;
+            color: #fff;
+            box-shadow: 0 0 15px rgba(0, 123, 255, 0.3);
+        }
+
+        .privacy-check {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 20px 0;
+            color: #000;
+        }
+
+        .privacy-check a {
+            color: #007bff;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .privacy-check a:hover {
+            color: #0056b3;
+            text-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+
+        .required {
+            color: #ff0000;
+            opacity: 0.7;
+        }
+
+        /* Estilo para el placeholder */
+        ::placeholder {
+            color: #000;
+        }
+
+        /* Estilo para las opciones del select */
+        select option {
+            background: #000;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <a href="index.html">INICIO</a>
+        <a href="herramientas.html">HERRAMIENTAS</a>
+        <a href="blog.html">BLOG</a>
+        <a href="contacto.html">CONTACTO</a>
+        <a href="faq.html">FAQ</a>
+        <a href="testimonios.html">TESTIMONIOS</a>
+        <a href="precios.html">PRECIOS</a>
+    </div>
+
+    <div class="content">
+        <div class="discretion-box">
+            <div class="discretion-title">DISCRECIÓN</div>
+            
+            <div class="question-text">
+                ¿Necesitas ayuda con seguridad informática?
+            </div>
+
+            <div class="contact-description">
+                Contáctanos directamente por WhatsApp para una respuesta inmediata
+            </div>
+
+            <a href="https://wa.me/79789128611" class="whatsapp-button">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
+                     alt="WhatsApp" 
+                     class="whatsapp-icon" 
+                     width="24" 
+                     height="24">
+                Enviar Mensaje por WhatsApp
+            </a>
+
+            <div class="info-section">
+                <div class="info-title">Información Importante</div>
+                
+                <div class="info-item">
+                    Número de WhatsApp: <span class="info-value">+7 978 912 8611</span>
+                </div>
+                
+                <div class="info-item">
+                    Horario: <span class="info-value">24/7</span>
+                </div>
+                
+                <div class="info-item">
+                    Métodos de Pago: <span class="info-value">Transferencia Segura</span>
+                </div>
+                
+                <div class="info-item">
+                    Comunicación: <span class="info-value">Encriptada y Segura</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <div class="form-title">Formulario de Contacto (OPCIONAL)</div>
+            
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="nombre">Nombre Completo <span class="required">*</span></label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="empresa">Empresa</label>
+                    <input type="text" id="empresa" name="empresa">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono">
+                </div>
+
+                <div class="form-group">
+                    <label for="servicio">Servicio de Interés <span class="required">*</span></label>
+                    <select id="servicio" name="servicio" required>
+                        <option value="">Seleccione un servicio</option>
+                        <option value="auditoria">Auditoría de Seguridad</option>
+                        <option value="pentesting">Pruebas de Penetración</option>
+                        <option value="consultoria">Consultoría de Seguridad</option>
+                        <option value="formacion">Formación y Capacitación</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="mensaje">Mensaje <span class="required">*</span></label>
+                    <textarea id="mensaje" name="mensaje" required></textarea>
+                </div>
+
+                <div class="privacy-check">
+                    <input type="checkbox" id="privacidad" name="privacidad" required>
+                    <label for="privacidad">
+                        He leído y acepto la <a href="privacidad.html">política de privacidad</a>
+                    </label>
+                </div>
+
+                <button type="submit" class="submit-button">Enviar Mensaje</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Gracias por su mensaje. Nos pondremos en contacto pronto.');
+        });
+    </script>
+
+    <div class="footer">
+        <p>© 2024 HACKER Ético - Todos los derechos reservados</p>
+    </div>
+
+    <script src="whatsapp-float.js"></script>
+</body>
+</html> 

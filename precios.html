@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Precios y Paquetes - HACKER Ético</title>
+    <meta name="description" content="Descubre paquetes privados de ciberseguridad autorizada, revisión de cuentas propias y protección informática. Soluciones discretas y profesionales.">
+    <meta name="keywords" content="HACKER, precios, paquetes, servicios, seguridad informática, auditoría, pentesting">
+    <link rel="canonical" href="https://hacker-seo.vercel.app/precios.html" />
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #000000;
+            color: #00ff00;
+            font-family: 'Courier New', monospace;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        #binary-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.35;
+            pointer-events: none;
+        }
+
+        .content {
+            background: transparent;
+            position: relative;
+            z-index: 1;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin: 2rem 0;
+            color: #00ff00;
+            text-shadow: 0 0 10px #00ff00;
+            letter-spacing: 2px;
+        }
+
+        .nav {
+            background: rgba(0, 0, 0, 0.9);
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 2px solid #00ff00;
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
+        }
+
+        .nav a {
+            color: #00ff00;
+            text-decoration: none;
+            margin: 0 1rem;
+            padding: 0.5rem 1rem;
+            border: 1px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .nav a:hover {
+            border-color: #00ff00;
+            box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+            text-shadow: 0 0 5px #00ff00;
+        }
+
+        .price-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem 0;
+        }
+
+        .price-card {
+            background: rgba(0, 0, 0, 0.8);
+            border: 1px solid #00ff00;
+            color: #00ff00;
+            padding: 2rem;
+            border-radius: 10px;
+            position: relative;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+        }
+
+        .price-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 30px rgba(0, 255, 0, 0.3);
+        }
+
+        .price-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #00ff00;
+            text-shadow: 0 0 5px #00ff00;
+        }
+
+        .price {
+            font-size: 2rem;
+            font-weight: bold;
+            margin: 1rem 0;
+            color: #00ff00;
+        }
+
+        .period {
+            color: rgba(0, 255, 0, 0.7);
+            font-size: 0.9rem;
+        }
+
+        .features {
+            list-style: none;
+            padding: 0;
+            margin: 2rem 0;
+        }
+
+        .features li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(0, 255, 0, 0.2);
+            position: relative;
+            padding-left: 1.5rem;
+            color: #00ff00;
+        }
+
+        .features li::before {
+            content: ">";
+            position: absolute;
+            left: 0;
+            color: #00ff00;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: transparent;
+            color: #00ff00;
+            border: 2px solid #00ff00;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            text-align: center;
+            width: calc(100% - 4rem);
+            margin-top: 1rem;
+        }
+
+        .cta-button:hover {
+            background: rgba(0, 255, 0, 0.1);
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.4);
+            transform: scale(1.05);
+        }
+
+        .popular {
+            border: 2px solid #00ff00;
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
+        }
+
+        .popular-badge {
+            position: absolute;
+            top: -15px;
+            right: 20px;
+            background: #00ff00;
+            color: #000;
+            padding: 0.5rem 1rem;
+            border-radius: 3px;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(0, 0, 0, 0.9);
+            border-top: 2px solid #00ff00;
+            margin-top: 3rem;
+        }
+
+        .globe-popup {
+            position: absolute;
+            background: rgba(0, 0, 0, 0.9);
+            border: 1px solid #00ff00;
+            border-radius: 10px;
+            padding: 15px;
+            color: #00ff00;
+            font-size: 14px;
+            max-width: 200px;
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .globe-popup.visible {
+            opacity: 1;
+        }
+
+        .globe-popup-face {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid #00ff00;
+            object-fit: cover;
+            position: relative;
+        }
+
+        .globe-popup-flag {
+            position: absolute;
+            bottom: -5px;
+            right: -5px;
+            width: 20px;
+            height: 15px;
+            border: 1px solid #00ff00;
+            border-radius: 2px;
+            object-fit: cover;
+        }
+
+        .globe-popup-face-container {
+            position: relative;
+            width: 50px;
+            height: 50px;
+        }
+
+        .globe-popup-details {
+            flex: 1;
+        }
+
+        .globe-popup-title {
+            font-weight: bold;
+            font-size: 13px;
+            margin-bottom: 5px;
+            color: #00ff00;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-shadow: 0 0 5px #00ff00;
+        }
+
+        .globe-popup-name {
+            font-weight: bold;
+            margin-bottom: 2px;
+            color: #00ff00;
+        }
+
+        .globe-popup-success {
+            font-size: 10px;
+            margin-bottom: 5px;
+            color: rgba(0, 255, 0, 0.8);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .globe-popup-achievement {
+            font-size: 12px;
+            color: rgba(0, 255, 0, 0.8);
+        }
+
+        .virtual-chat {
+            position: fixed;
+            right: 24px;
+            bottom: 24px;
+            width: min(380px, calc(100vw - 32px));
+            z-index: 500;
+            font-family: 'Courier New', monospace;
+            color: #00ff00;
+        }
+
+        .chat-panel {
+            display: none;
+            overflow: hidden;
+            border: 1px solid #00ff00;
+            border-radius: 18px;
+            background: rgba(0, 0, 0, 0.94);
+            box-shadow: 0 0 35px rgba(0, 255, 0, 0.32);
+            backdrop-filter: blur(10px);
+        }
+
+        .virtual-chat.open .chat-panel {
+            display: block;
+            animation: chatEntrance 0.45s ease;
+        }
+
+        @keyframes chatEntrance {
+            from {
+                opacity: 0;
+                transform: translateY(18px) scale(0.96);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        .chat-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            padding: 1rem;
+            border-bottom: 1px solid rgba(0, 255, 0, 0.35);
+            background: linear-gradient(135deg, rgba(0, 255, 0, 0.16), rgba(0, 0, 0, 0.9));
+        }
+
+        .chat-status {
+            display: block;
+            margin-top: 3px;
+            font-size: 0.75rem;
+            color: rgba(0, 255, 0, 0.75);
+        }
+
+        .chat-close,
+        .chat-toggle {
+            cursor: pointer;
+            border: 1px solid #00ff00;
+            background: #000;
+            color: #00ff00;
+            font-family: inherit;
+        }
+
+        .chat-close {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            line-height: 1;
+        }
+
+        .chat-messages {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            max-height: 330px;
+            overflow-y: auto;
+            padding: 1rem;
+        }
+
+        .chat-message {
+            max-width: 85%;
+            padding: 0.85rem;
+            border-radius: 14px;
+            line-height: 1.45;
+            font-size: 0.92rem;
+        }
+
+        .chat-message.agent {
+            align-self: flex-start;
+            border: 1px solid rgba(0, 255, 0, 0.55);
+            background: rgba(0, 255, 0, 0.08);
+        }
+
+        .chat-message.client {
+            align-self: flex-end;
+            color: #000;
+            background: #00ff00;
+            box-shadow: 0 0 14px rgba(0, 255, 0, 0.35);
+        }
+
+        .chat-actions {
+            display: grid;
+            gap: 0.5rem;
+            padding: 0 1rem 1rem;
+        }
+
+        .chat-quick-action {
+            cursor: pointer;
+            padding: 0.7rem;
+            border: 1px solid rgba(0, 255, 0, 0.55);
+            border-radius: 10px;
+            background: transparent;
+            color: #00ff00;
+            font-family: inherit;
+            text-align: left;
+            transition: all 0.2s ease;
+        }
+
+        .chat-quick-action:hover {
+            background: rgba(0, 255, 0, 0.12);
+            box-shadow: 0 0 14px rgba(0, 255, 0, 0.18);
+        }
+
+        .chat-form {
+            display: flex;
+            gap: 0.5rem;
+            padding: 1rem;
+            border-top: 1px solid rgba(0, 255, 0, 0.28);
+        }
+
+        .chat-form input {
+            flex: 1;
+            min-width: 0;
+            padding: 0.8rem;
+            border: 1px solid rgba(0, 255, 0, 0.55);
+            border-radius: 10px;
+            background: #050505;
+            color: #00ff00;
+            font-family: inherit;
+        }
+
+        .chat-form input::placeholder {
+            color: rgba(0, 255, 0, 0.55);
+        }
+
+        .chat-form button {
+            cursor: pointer;
+            padding: 0 1rem;
+            border: 1px solid #00ff00;
+            border-radius: 10px;
+            background: #00ff00;
+            color: #000;
+            font-family: inherit;
+            font-weight: bold;
+        }
+
+        .chat-toggle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.65rem;
+            width: 100%;
+            padding: 1rem 1.2rem;
+            border-radius: 999px;
+            box-shadow: 0 0 30px rgba(0, 255, 0, 0.28);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            animation: chatPulse 1.8s infinite;
+        }
+
+        .virtual-chat.open .chat-toggle {
+            display: none;
+        }
+
+        @keyframes chatPulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.03);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .price-cards {
+                grid-template-columns: 1fr;
+                padding: 1rem;
+            }
+
+            .nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .nav a {
+                margin: 0.5rem;
+            }
+
+            .content {
+                padding: 1rem;
+            }
+
+            .virtual-chat {
+                right: 12px;
+                bottom: 12px;
+                width: calc(100vw - 24px);
+            }
+
+            .chat-panel {
+                border-radius: 16px;
+            }
+
+            .chat-messages {
+                max-height: 48vh;
+            }
+
+            .chat-form {
+                flex-direction: column;
+            }
+
+            .chat-form button {
+                padding: 0.85rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <canvas id="binary-background"></canvas>
+    
+    <nav class="nav">
+        <a href="index.html">Inicio</a>
+        <a href="precios.html">Precios</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+
+    <div class="content">
+        <h1>Precios y Paquetes</h1>
+        
+        <div class="price-cards">
+            <div class="price-card">
+                <div class="popular-badge">Más Popular</div>
+                <h3>Protección WP y ubicación autorizada</h3>
+                <div class="price">$2,100.00 MXN</div>
+                <div class="period">por cuenta autorizada</div>
+                <ul class="features">
+                    <li>Análisis de vulnerabilidades básico</li>
+                    <li>Revisión de seguridad para cuenta propia</li>
+                    <li>Monitoreo preventivo por 12 meses</li>
+                    <li>Guía directa, servicio y atención por videollamada</li>
+                    <li>Activación inicial en menos de 5 minutos</li>
+                </ul>
+                <a href="https://wa.me/+79789128611?text=Hola,%20me%20interesa%20el%20servicio%20de%20protección%20WP%20y%20ubicación%20autorizada" class="cta-button" target="_blank">Solicitar Cotización</a>
+            </div>
+
+            <div class="price-card">
+                <h3>Protección FB, MS e IG</h3>
+                <div class="price">$3,100.00 MXN</div>
+                <div class="period">perfiles propios vinculados</div>
+                <ul class="features">
+                    <li>Análisis de vulnerabilidades completo</li>
+                    <li>Hasta 3 perfiles autorizados</li>
+                    <li>Revisión de accesos y privacidad</li>
+                    <li>Endurecimiento de seguridad</li>
+                    <li>Investigación preventiva de riesgo digital</li>
+                    <li>Entrega inicial en 30 minutos</li>
+                </ul>
+                <a href="https://wa.me/+79789128611?text=Hola,%20me%20interesa%20el%20servicio%20de%20protección%20FB,%20MS%20e%20IG" class="cta-button" target="_blank">Solicitar Cotización</a>
+            </div>
+
+            <div class="price-card popular">
+                <div class="popular-badge">Más Popular</div>
+                <h3>Seguridad completa iOS o Android</h3>
+                <div class="price">$4,999</div>
+                <div class="period">por dispositivo autorizado</div>
+                <ul class="features">
+                    <li>Análisis de vulnerabilidades avanzado</li>
+                    <li>Revisión de configuración iOS o Android</li>
+                    <li>Auditoría de permisos y aplicaciones instaladas</li>
+                    <li>Protección de datos sensibles</li>
+                    <li>Soporte 24/7</li>
+                    <li>Guía y práctica con el mismo dispositivo</li>
+                    <li>Diagnóstico inicial en 40 minutos</li>
+                </ul>
+                <a href="https://wa.me/+79789128611?text=Hola,%20me%20interesa%20el%20servicio%20de%20seguridad%20completa%20iOS%20o%20Android" class="cta-button" target="_blank">Solicitar Cotización</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="virtual-chat" id="virtual-chat" aria-live="polite">
+        <div class="chat-panel" role="dialog" aria-label="Chat directo con h23">
+            <div class="chat-header">
+                <div>
+                    <strong>h23</strong>
+                    <span class="chat-status">Activo ahora</span>
+                </div>
+                <button class="chat-close" type="button" aria-label="Cerrar chat">&times;</button>
+            </div>
+
+            <div class="chat-messages" id="chat-messages"></div>
+
+            <div class="chat-actions">
+                <button class="chat-quick-action" type="button" data-message="Me interesa un paquete y quiero más información">Quiero información de un paquete</button>
+                <button class="chat-quick-action" type="button" data-message="Necesito hablar contigo ahora con discreción">Necesito hablar contigo ahora</button>
+            </div>
+
+            <form class="chat-form" id="chat-form">
+                <input id="chat-input" type="text" autocomplete="off" placeholder="Escribe tu mensaje aquí...">
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+
+        <button class="chat-toggle" id="chat-toggle" type="button">
+            <span>Chat en vivo</span>
+            <strong>Hola</strong>
+        </button>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 HACKER. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script>
+        (function() {
+            const CONFIG = {
+                MIN_FONT_SIZE: 16,
+                MAX_FONT_SIZE: 26,
+                FONT_SCALE: 0.015,
+                GLOBE_RADIUS_SCALE: 0.9,
+                LAT_STEP: 12,
+                LNG_STEP: 10,
+                LAT_POINTS_SCALE: 150,
+                LNG_POINTS_SCALE: 80,
+                ROTATION_SPEED: 0.2,
+                CHANGE_INTERVAL: 500,
+                TRANSITION_DURATION: 200,
+                CHARS: '@#*=%+~-:.WHACKING',
+                TESTIMONIALS: [
+                    {
+                        name: "Elena Gutiérrez",
+                        achievement: "Revisión completa en sistema Android e iOS",
+                        image: "https://flagcdn.com/w160/es.png",
+                        lat: 45,
+                        lng: 0,
+                        radius: 1.2
+                    },
+                    {
+                        name: "Carlos Ramírez",
+                        achievement: "Revisión de seguridad en redes sociales",
+                        image: "https://flagcdn.com/w160/co.png",
+                        lat: -45,
+                        lng: 90,
+                        radius: 1.1
+                    },
+                    {
+                        name: "Zhang Wei",
+                        achievement: "Análisis de vulnerabilidades avanzado",
+                        image: "https://flagcdn.com/w160/cn.png",
+                        lat: 45,
+                        lng: 180,
+                        radius: 1.3
+                    },
+                    {
+                        name: "John Smith",
+                        achievement: "Auditoría autorizada en sistemas iOS",
+                        image: "https://flagcdn.com/w160/us.png",
+                        lat: 0,
+                        lng: -90,
+                        radius: 1.4
+                    },
+                    {
+                        name: "Aisha Patel",
+                        achievement: "Auditoría autorizada de redes corporativas",
+                        image: "https://flagcdn.com/w160/in.png",
+                        lat: -45,
+                        lng: -180,
+                        radius: 1.1
+                    },
+                    {
+                        name: "Ivan Petrov",
+                        achievement: "Análisis forense digital",
+                        image: "https://flagcdn.com/w160/ru.png",
+                        lat: 0,
+                        lng: 90,
+                        radius: 1.2
+                    },
+                    {
+                        name: "Fatima Zahra",
+                        achievement: "Protección preventiva de WhatsApp",
+                        image: "https://flagcdn.com/w160/ae.png",
+                        lat: -45,
+                        lng: 0,
+                        radius: 1.3
+                    },
+                    {
+                        name: "Miguel Hernández",
+                        achievement: "Revisión autorizada de redes sociales",
+                        image: "https://flagcdn.com/w160/mx.png",
+                        lat: 0,
+                        lng: 180,
+                        radius: 1.4
+                    },
+                    {
+                        name: "Marely Amaris",
+                        achievement: "Protección de perfiles autorizados",
+                        image: "https://flagcdn.com/w160/eg.png",
+                        lat: 45,
+                        lng: -90,
+                        radius: 1.3
+                    }
+                ]
+            };
+
+            const canvas = document.getElementById('binary-background');
+            const ctx = canvas.getContext('2d');
+            const testimonialsContainer = document.createElement('div');
+            testimonialsContainer.style.position = 'fixed';
+            testimonialsContainer.style.top = '0';
+            testimonialsContainer.style.left = '0';
+            testimonialsContainer.style.width = '100%';
+            testimonialsContainer.style.height = '100%';
+            testimonialsContainer.style.pointerEvents = 'none';
+            document.body.appendChild(testimonialsContainer);
+
+            function createTestimonialPopup(testimonial) {
+                const popup = document.createElement('div');
+                popup.className = 'globe-popup';
+                popup.innerHTML = `
+                    <div class="globe-popup-face-container">
+                        <img src="${testimonial.image}" loading="lazy" alt="" class="globe-popup-face">
+                    </div>
+                    <div class="globe-popup-details">
+                        <p class="globe-popup-title">TESTIMONIO</p>
+                        <p class="globe-popup-name">${testimonial.name}</p>
+                        <p class="globe-popup-success">TRABAJO SOLICITADO Y REALIZADO CON EXITO</p>
+                        <p class="globe-popup-achievement">${testimonial.achievement}</p>
+                    </div>
+                `;
+                testimonialsContainer.appendChild(popup);
+                return popup;
+            }
+
+            const testimonialPopups = CONFIG.TESTIMONIALS.map(createTestimonialPopup);
+
+            function updateTestimonialPositions(rotation) {
+                testimonialPopups.forEach((popup, index) => {
+                    const testimonial = CONFIG.TESTIMONIALS[index];
+                    const phi = (90 - testimonial.lat) * (Math.PI / 180);
+                    const theta = (testimonial.lng + rotation) * (Math.PI / 180);
+                    
+                    const x = radius * testimonial.radius * Math.sin(phi) * Math.cos(theta);
+                    const y = radius * testimonial.radius * Math.cos(phi);
+                    const z = radius * testimonial.radius * Math.sin(phi) * Math.sin(theta);
+                    
+                    const tiltedY = y * Math.cos(tilt) - z * Math.sin(tilt);
+                    const tiltedZ = y * Math.sin(tilt) + z * Math.cos(tilt);
+                    
+                    if (tiltedZ > -radius) {
+                        const projX = centerX + x;
+                        const projY = centerY + tiltedY;
+                        
+                        popup.style.left = `${projX}px`;
+                        popup.style.top = `${projY}px`;
+                        popup.style.transform = `translate(-50%, -50%) scale(${1 + tiltedZ / (radius * 2)})`;
+                        popup.style.opacity = `${0.3 + (tiltedZ / radius) * 0.7}`;
+                        popup.classList.add('visible');
+                    } else {
+                        popup.classList.remove('visible');
+                    }
+                });
+            }
+
+            function animate() {
+                rotation += CONFIG.ROTATION_SPEED;
+                drawGlobe(rotation);
+                updateTestimonialPositions(rotation);
+                requestAnimationFrame(animate);
+            }
+
+            function resizeCanvas() {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+                return Math.min(window.innerWidth, window.innerHeight);
+            }
+
+            const canvasSize = resizeCanvas();
+            const centerX = window.innerWidth / 2;
+            const centerY = window.innerHeight / 2;
+            const radius = (Math.min(window.innerWidth, window.innerHeight) / 2) * CONFIG.GLOBE_RADIUS_SCALE;
+            const tilt = 0;
+            let rotation = 0;
+
+            function getFontSize() {
+                return Math.min(CONFIG.MAX_FONT_SIZE, 
+                       Math.max(CONFIG.MIN_FONT_SIZE, window.innerWidth * CONFIG.FONT_SCALE));
+            }
+
+            const globePoints = [];
+
+            function generatePoints() {
+                globePoints.length = 0;
+                
+                // Latitude lines
+                for (let lat = -90; lat <= 90; lat += CONFIG.LAT_STEP) {
+                    const cosLat = Math.abs(Math.cos(lat * Math.PI / 180));
+                    const pointsAtThisLat = Math.floor(CONFIG.LAT_POINTS_SCALE * Math.pow(cosLat, 3));
+                    const lngStep = pointsAtThisLat > 0 ? 360 / pointsAtThisLat : 360;
+                    
+                    for (let lng = -180; lng <= 180; lng += lngStep) {
+                        if (pointsAtThisLat > 0) {
+                            globePoints.push({
+                                lat,
+                                lng,
+                                char: CONFIG.CHARS[Math.floor(Math.random() * CONFIG.CHARS.length)],
+                                nextChar: CONFIG.CHARS[Math.floor(Math.random() * CONFIG.CHARS.length)],
+                                transitionStart: Math.random() * CONFIG.CHANGE_INTERVAL,
+                                transitionProgress: 0
+                            });
+                        }
+                    }
+                }
+                
+                // Longitude lines
+                for (let lng = -180; lng < 180; lng += CONFIG.LNG_STEP) {
+                    const cosLng = Math.abs(Math.cos(lng * Math.PI / 180));
+                    const pointsAtThisLng = Math.floor(CONFIG.LNG_POINTS_SCALE * (1 + cosLng));
+                    const latStep = pointsAtThisLng > 0 ? 180 / pointsAtThisLng : 180;
+                    
+                    for (let lat = -90; lat <= 90; lat += latStep) {
+                        if (pointsAtThisLng > 0) {
+                            globePoints.push({
+                                lat,
+                                lng,
+                                char: CONFIG.CHARS[Math.floor(Math.random() * CONFIG.CHARS.length)],
+                                nextChar: CONFIG.CHARS[Math.floor(Math.random() * CONFIG.CHARS.length)],
+                                transitionStart: Math.random() * CONFIG.CHANGE_INTERVAL,
+                                transitionProgress: 0
+                            });
+                        }
+                    }
+                }
+            }
+
+            function drawGlobe(rotation) {
+                ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
+                ctx.font = `bold ${getFontSize()}px monospace`;
+                
+                const currentTime = Date.now();
+
+                globePoints.forEach(point => {
+                    if (currentTime - point.transitionStart >= CONFIG.CHANGE_INTERVAL) {
+                        point.char = point.nextChar;
+                        point.nextChar = CONFIG.CHARS[Math.floor(Math.random() * CONFIG.CHARS.length)];
+                        point.transitionStart = currentTime + Math.random() * 1000;
+                        point.transitionProgress = 0;
+                    }
+
+                    const phi = (90 - point.lat) * (Math.PI / 180);
+                    const theta = (point.lng + rotation) * (Math.PI / 180);
+                    
+                    const x = radius * Math.sin(phi) * Math.cos(theta);
+                    const y = radius * Math.cos(phi);
+                    const z = radius * Math.sin(phi) * Math.sin(theta);
+                    
+                    const tiltedY = y * Math.cos(tilt) - z * Math.sin(tilt);
+                    const tiltedZ = y * Math.sin(tilt) + z * Math.cos(tilt);
+                    
+                    if (tiltedZ > -radius) {
+                        const projX = centerX + x;
+                        const projY = centerY + tiltedY;
+                        
+                        const depthOpacity = 0.9 + (tiltedZ / radius) * 0.1;
+                        
+                        const timeSinceTransition = currentTime - point.transitionStart;
+                        point.transitionProgress = Math.min(1, timeSinceTransition / CONFIG.TRANSITION_DURATION);
+                        const transitionOpacity = Math.sin(point.transitionProgress * Math.PI);
+                        
+                        ctx.fillStyle = `rgba(35, 88, 219, ${depthOpacity * (1 - transitionOpacity)})`;
+                        ctx.fillText(point.char, projX, projY);
+                        
+                        ctx.fillStyle = `rgba(35, 88, 219, ${depthOpacity * transitionOpacity})`;
+                        ctx.fillText(point.nextChar, projX, projY);
+                    }
+                });
+            }
+
+            window.addEventListener('resize', () => {
+                resizeCanvas();
+                generatePoints();
+            });
+
+            generatePoints();
+            animate();
+        })();
+    </script>
+    <script>
+        (function() {
+            const chat = document.getElementById('virtual-chat');
+            const toggle = document.getElementById('chat-toggle');
+            const close = chat.querySelector('.chat-close');
+            const messages = document.getElementById('chat-messages');
+            const form = document.getElementById('chat-form');
+            const input = document.getElementById('chat-input');
+            const quickActions = chat.querySelectorAll('.chat-quick-action');
+            const whatsappNumber = '79789128611';
+            let hasOpened = false;
+
+            function scrollToLatest() {
+                messages.scrollTop = messages.scrollHeight;
+            }
+
+            function addMessage(text, type) {
+                const bubble = document.createElement('div');
+                bubble.className = `chat-message ${type}`;
+                bubble.textContent = text;
+                messages.appendChild(bubble);
+                scrollToLatest();
+            }
+
+            function openChat() {
+                chat.classList.add('open');
+                if (!hasOpened) {
+                    hasOpened = true;
+                    addMessage('Hola, soy h23. Vi que estás revisando los precios. ¿Qué paquete te interesa?', 'agent');
+                    setTimeout(() => {
+                        addMessage('Te respondo aquí mismo. Cuéntame qué necesitas y lo vemos directo.', 'agent');
+                    }, 900);
+                }
+                setTimeout(() => input.focus(), 200);
+            }
+
+            function closeChat() {
+                chat.classList.remove('open');
+            }
+
+            function sendToAdvisor(text) {
+                const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent('Hola, vengo desde la página de precios. ' + text)}`;
+                window.open(url, '_blank', 'noopener');
+            }
+
+            function handleClientMessage(text) {
+                const cleanText = text.trim();
+                if (!cleanText) {
+                    return;
+                }
+
+                addMessage(cleanText, 'client');
+                input.value = '';
+
+                setTimeout(() => {
+                    addMessage('Perfecto. Te abro mi WhatsApp para seguir hablando directo conmigo.', 'agent');
+                    sendToAdvisor(cleanText);
+                }, 650);
+            }
+
+            toggle.addEventListener('click', openChat);
+            close.addEventListener('click', closeChat);
+            form.addEventListener('submit', function(event) {
+                event.preventDefault();
+                handleClientMessage(input.value);
+            });
+
+            quickActions.forEach(button => {
+                button.addEventListener('click', function() {
+                    handleClientMessage(button.dataset.message);
+                });
+            });
+
+            setTimeout(openChat, 2200);
+        })();
+    </script>
+</body>
+</html> 

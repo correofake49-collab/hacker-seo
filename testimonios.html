@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonios y Casos de Éxito - HACKER Ético</title>
+    <meta name="description" content="Testimonios de clientes y casos de éxito en servicios de HACKING ético y seguridad informática. Descubre cómo hemos ayudado a empresas a mejorar su seguridad.">
+    <meta name="keywords" content="HACKER, testimonios, casos de éxito, clientes satisfechos, seguridad informática">
+    <link rel="canonical" href="https://hacker-seo.vercel.app/testimonios.html" />
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #000;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        .matrix-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: #000;
+            overflow: hidden;
+        }
+
+        .matrix-column {
+            position: absolute;
+            width: 20px;
+            font-family: 'Courier New', monospace;
+            font-size: 16px;
+            color: #ff0000;
+            opacity: 0.7;
+            text-shadow: 0 0 5px #ff0000;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(-100%);
+            }
+            100% {
+                transform: translateY(100vh);
+            }
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px;
+        }
+        .testimonial-card {
+            border: 1px solid rgba(255, 0, 0, 0.2);
+            padding: 25px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            background-color: rgba(0, 0, 0, 0.8);
+            box-shadow: 0 2px 4px rgba(255,0,0,0.2);
+        }
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .testimonial-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 15px;
+            background-color: #ff0000;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .testimonial-info h3 {
+            margin: 0;
+            color: #ffffff;
+        }
+        .testimonial-info p {
+            margin: 5px 0 0;
+            color: #cccccc;
+            font-size: 0.9em;
+        }
+        .testimonial-content {
+            line-height: 1.6;
+            color: #ffffff;
+        }
+        .case-study {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 30px;
+            margin-bottom: 40px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 0, 0, 0.2);
+        }
+        .case-study h2 {
+            color: #ff0000;
+            margin-top: 0;
+        }
+        .case-study-stats {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 5px;
+            border: 1px solid rgba(255, 0, 0, 0.2);
+        }
+        .stat-item {
+            text-align: center;
+        }
+        .stat-number {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ff0000;
+        }
+        .stat-label {
+            color: #ffffff;
+            font-size: 0.9em;
+        }
+        h1 {
+            color: #ffffff;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const bg = document.createElement('div');
+            bg.className = 'matrix-bg';
+            document.body.insertBefore(bg, document.body.firstChild);
+
+            function createColumn() {
+                const column = document.createElement('div');
+                column.className = 'matrix-column';
+                column.style.left = Math.random() * 100 + '%';
+                column.style.animationDuration = (Math.random() * 3 + 2) + 's';
+                
+                let content = '';
+                for(let i = 0; i < 30; i++) {
+                    content += Math.random() > 0.5 ? '1' : '0';
+                    content += '<br>';
+                }
+                column.innerHTML = content;
+                
+                bg.appendChild(column);
+                
+                setTimeout(() => {
+                    column.remove();
+                }, 5000);
+            }
+
+            setInterval(createColumn, 100);
+        });
+    </script>
+</head>
+<body>
+    <div class="nav">
+        <a href="index.html">INICIO</a>
+        <a href="herramientas.html">HERRAMIENTAS</a>
+        <a href="blog.html">BLOG</a>
+        <a href="contacto.html">CONTACTO</a>
+        <a href="faq.html">FAQ</a>
+        <a href="testimonios.html">TESTIMONIOS</a>
+        <a href="precios.html">PRECIOS</a>
+    </div>
+
+    <div class="content">
+        <h1>Testimonios y Casos de Éxito</h1>
+
+        <div class="case-study">
+            <h2>Empresa Financiera - Auditoría de Seguridad</h2>
+            <p>Una importante institución financiera confió en nuestros servicios para realizar una auditoría completa de su infraestructura tecnológica.</p>
+            
+            <div class="case-study-stats">
+                <div class="stat-item">
+                    <div class="stat-number">98%</div>
+                    <div class="stat-label">Vulnerabilidades Corregidas</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">45</div>
+                    <div class="stat-label">Días de Trabajo</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">12</div>
+                    <div class="stat-label">Sistemas Auditados</div>
+                </div>
+            </div>
+
+            <p>Resultados: Implementamos un plan de seguridad integral que redujo significativamente los riesgos de ciberseguridad y mejoró la confianza de los clientes.</p>
+        </div>
+
+        <div class="testimonial-card">
+            <div class="testimonial-header">
+                <div class="testimonial-avatar">JD</div>
+                <div class="testimonial-info">
+                    <h3>Juan Díaz</h3>
+                    <p>Director de TI, Empresa Financiera</p>
+                </div>
+            </div>
+            <div class="testimonial-content">
+                "El equipo de HACKER Ético realizó un trabajo excepcional en nuestra auditoría de seguridad. Su profesionalismo y conocimiento técnico nos ayudaron a identificar y corregir vulnerabilidades críticas que no habíamos detectado."
+            </div>
+        </div>
+
+        <div class="case-study">
+            <h2>E-commerce - Pruebas de Penetración</h2>
+            <p>Una plataforma de comercio electrónico buscó mejorar la seguridad de su sitio web y aplicaciones móviles.</p>
+            
+            <div class="case-study-stats">
+                <div class="stat-item">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Vulnerabilidades Identificadas</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">30</div>
+                    <div class="stat-label">Días de Trabajo</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">5</div>
+                    <div class="stat-label">Aplicaciones Testeadas</div>
+                </div>
+            </div>
+
+            <p>Resultados: Implementamos medidas de seguridad que protegieron la información de los clientes y mejoraron la confianza en la plataforma.</p>
+        </div>
+
+        <div class="testimonial-card">
+            <div class="testimonial-header">
+                <div class="testimonial-avatar">MR</div>
+                <div class="testimonial-info">
+                    <h3>María Rodríguez</h3>
+                    <p>CEO, E-commerce</p>
+                </div>
+            </div>
+            <div class="testimonial-content">
+                "Gracias al equipo de HACKER Ético, pudimos identificar y corregir vulnerabilidades críticas en nuestra plataforma. Su enfoque profesional y detallado nos dio la confianza necesaria para seguir creciendo de manera segura."
+            </div>
+        </div>
+
+        <div class="testimonial-card">
+            <div class="testimonial-header">
+                <div class="testimonial-avatar">AP</div>
+                <div class="testimonial-info">
+                    <h3>Andrés Pérez</h3>
+                    <p>Gerente de Seguridad, Empresa de Telecomunicaciones</p>
+                </div>
+            </div>
+            <div class="testimonial-content">
+                "La consultoría en ciberseguridad que recibimos fue invaluable. El equipo no solo identificó problemas, sino que también nos ayudó a implementar soluciones efectivas y a capacitar a nuestro personal."
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>© 2024 HACKER Ético - Todos los derechos reservados</p>
+    </div>
+
+    <script src="whatsapp-float.js"></script>
+</body>
+</html> 

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas Frecuentes - Servicios Profesionales de Ciberseguridad</title>
+    <meta name="description" content="Respuestas a preguntas frecuentes sobre nuestros servicios de auditoría y seguridad informática.">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #000000;
+            overflow-x: hidden;
+            font-family: 'Courier New', monospace;
+            color: #00ff00;
+            position: relative;
+        }
+
+        #binary-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.1;
+            pointer-events: none;
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #000000;
+        }
+
+        h1, h2, h3, p, li {
+            color: #00ff00;
+            text-shadow: 0 0 5px #00ff00;
+        }
+
+        .faq-section {
+            margin-bottom: 30px;
+            background: #000000;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #00ff00;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+            background: #000000;
+        }
+
+        .faq-question {
+            font-weight: bold;
+            margin-bottom: 10px;
+            cursor: pointer;
+            color: #00ff00;
+        }
+
+        .faq-answer {
+            display: none;
+            padding: 10px;
+            background: #000000;
+            border-radius: 5px;
+            color: #00ff00;
+            border: 1px solid #00ff00;
+        }
+
+        .faq-question:hover {
+            text-shadow: 0 0 8px #00ff00;
+        }
+
+        .certifications {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+            background: #000000;
+        }
+
+        .certification-badge {
+            background: #000000;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 200px;
+            border: 1px solid #00ff00;
+        }
+
+        .certification-badge h3 {
+            color: #00ff00;
+            margin-bottom: 10px;
+        }
+
+        .certification-badge p {
+            color: #00ff00;
+        }
+
+        .certification-badge img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 10px;
+        }
+
+        .footer {
+            background: #000000;
+            color: #00ff00;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .footer p {
+            color: #00ff00;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="binary-background"></canvas>
+    <div class="nav">
+        <a href="index.html">INICIO</a>
+        <a href="herramientas.html">HERRAMIENTAS</a>
+        <a href="blog.html">BLOG</a>
+        <a href="contacto.html">CONTACTO</a>
+        <a href="faq.html">FAQ</a>
+        <a href="testimonios.html">TESTIMONIOS</a>
+        <a href="precios.html">PRECIOS</a>
+    </div>
+
+    <div class="content">
+        <h1>Preguntas Frecuentes</h1>
+
+        <div class="certifications">
+            <div class="certification-badge">
+                <h3>ISO 27001</h3>
+                <p>Certificación en Gestión de Seguridad de la Información</p>
+            </div>
+            <div class="certification-badge">
+                <h3>CEH</h3>
+                <p>Certified Ethical Hacker</p>
+            </div>
+            <div class="certification-badge">
+                <h3>CISSP</h3>
+                <p>Certified Information Systems Security Professional</p>
+            </div>
+        </div>
+
+        <div class="faq-section">
+            <h2>Servicios y Alcance</h2>
+            <div class="faq-item">
+                <div class="faq-question">¿Qué tipos de auditorías de seguridad realizan?</div>
+                <div class="faq-answer">
+                    <p>Realizamos auditorías completas de seguridad que incluyen:</p>
+                    <ul>
+                        <li>Evaluación de vulnerabilidades</li>
+                        <li>Pruebas de penetración autorizadas</li>
+                        <li>Análisis de configuraciones</li>
+                        <li>Revisión de políticas de seguridad</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-section">
+            <h2>Proceso y Metodología</h2>
+            <div class="faq-item">
+                <div class="faq-question">¿Cómo se desarrolla una auditoría de seguridad?</div>
+                <div class="faq-answer">
+                    <p>Nuestro proceso incluye:</p>
+                    <ol>
+                        <li>Reunión inicial y definición de alcance</li>
+                        <li>Firma de acuerdos legales</li>
+                        <li>Evaluación y pruebas</li>
+                        <li>Informe detallado</li>
+                        <li>Presentación de resultados</li>
+                        <li>Plan de remediación</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-section">
+            <h2>Aspectos Legales</h2>
+            <div class="faq-item">
+                <div class="faq-question">¿Qué documentación legal se requiere?</div>
+                <div class="faq-answer">
+                    <p>Para iniciar cualquier servicio necesitamos:</p>
+                    <ul>
+                        <li>Contrato de servicios firmado</li>
+                        <li>Acuerdo de confidencialidad (NDA)</li>
+                        <li>Autorización formal por escrito</li>
+                        <li>Documento de alcance firmado</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-section">
+            <h2>Confidencialidad</h2>
+            <div class="faq-item">
+                <div class="faq-question">¿Cómo protegen la información de sus clientes?</div>
+                <div class="faq-answer">
+                    <p>Implementamos múltiples capas de protección:</p>
+                    <ul>
+                        <li>Encriptación de datos end-to-end</li>
+                        <li>Almacenamiento seguro</li>
+                        <li>Acceso restringido</li>
+                        <li>Políticas de destrucción de datos</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Efecto de lluvia binaria
+        const canvas = document.getElementById('binary-background');
+        const ctx = canvas.getContext('2d');
+
+        // Ajustar tamaño del canvas
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+
+        // Configuración de la lluvia
+        const binary = '10';
+        const fontSize = 14;
+        const columns = canvas.width / fontSize;
+        const drops = new Array(Math.floor(columns)).fill(1);
+
+        function draw() {
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+            ctx.fillStyle = '#00ff00';
+            ctx.font = fontSize + 'px monospace';
+
+            for (let i = 0; i < drops.length; i++) {
+                const text = binary.charAt(Math.floor(Math.random() * binary.length));
+                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+                
+                if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                    drops[i] = 0;
+                }
+                drops[i]++;
+            }
+        }
+
+        setInterval(draw, 33);
+
+        // Script existente para las FAQ
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+    </script>
+
+    <div class="footer">
+        <p>© 2024 HACKER Ético - Todos los derechos reservados</p>
+    </div>
+
+    <script src="whatsapp-float.js"></script>
+</body>
+</html> 

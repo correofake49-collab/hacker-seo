@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herramientas Esenciales para HACKERS Éticos</title>
+    <meta name="description" content="Descubre las herramientas más importantes para el hacking ético y la seguridad informática. Kali Linux, Metasploit, Wireshark y más.">
+    <meta name="keywords" content="herramientas hacking, Kali Linux, Metasploit, Wireshark, seguridad informática">
+    <link rel="canonical" href="https://hacker-seo.vercel.app/herramientas.html" />
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #000;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        .matrix-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: #000;
+            overflow: hidden;
+        }
+
+        .matrix-column {
+            position: absolute;
+            width: 20px;
+            font-family: 'Courier New', monospace;
+            font-size: 16px;
+            color: #ff0000;
+            opacity: 0.7;
+            text-shadow: 0 0 5px #ff0000;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(-100%);
+            }
+            100% {
+                transform: translateY(100vh);
+            }
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px;
+        }
+        h1 {
+            color: #ffffff;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .tool-section {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(255,0,0,0.2);
+            border: 1px solid rgba(255, 0, 0, 0.2);
+        }
+        .tool-title {
+            color: #ff0000;
+            font-size: 24px;
+            margin-bottom: 15px;
+            text-decoration: none;
+        }
+        .tool-description {
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+            position: relative;
+            color: #ffffff;
+        }
+        li:before {
+            content: "•";
+            color: #ff0000;
+            font-weight: bold;
+            position: absolute;
+            left: -15px;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const bg = document.createElement('div');
+            bg.className = 'matrix-bg';
+            document.body.insertBefore(bg, document.body.firstChild);
+
+            function createColumn() {
+                const column = document.createElement('div');
+                column.className = 'matrix-column';
+                column.style.left = Math.random() * 100 + '%';
+                column.style.animationDuration = (Math.random() * 3 + 2) + 's';
+                
+                let content = '';
+                for(let i = 0; i < 30; i++) {
+                    content += Math.random() > 0.5 ? '1' : '0';
+                    content += '<br>';
+                }
+                column.innerHTML = content;
+                
+                bg.appendChild(column);
+                
+                setTimeout(() => {
+                    column.remove();
+                }, 5000);
+            }
+
+            setInterval(createColumn, 100);
+        });
+    </script>
+</head>
+<body>
+    <div class="nav">
+        <a href="index.html">INICIO</a>
+        <a href="herramientas.html">HERRAMIENTAS</a>
+        <a href="blog.html">BLOG</a>
+        <a href="contacto.html">CONTACTO</a>
+        <a href="faq.html">FAQ</a>
+        <a href="testimonios.html">TESTIMONIOS</a>
+        <a href="precios.html">PRECIOS</a>
+    </div>
+
+    <h1>Herramientas Esenciales para HACKERS Éticos</h1>
+
+    <div class="tool-section">
+        <h2 class="tool-title">Kali Linux</h2>
+        <p class="tool-description">La distribución más popular para pruebas de penetración y auditorías de seguridad.</p>
+        <ul>
+            <li>Más de 600 herramientas preinstaladas</li>
+            <li>Entorno personalizable</li>
+            <li>Soporte para múltiples arquitecturas</li>
+        </ul>
+    </div>
+
+    <div class="tool-section">
+        <h2 class="tool-title">Metasploit Framework</h2>
+        <p class="tool-description">Plataforma usada en laboratorios autorizados para validar controles de seguridad.</p>
+        <ul>
+            <li>Base de datos de pruebas de seguridad actualizada</li>
+            <li>Interfaz gráfica y de línea de comandos</li>
+            <li>Herramientas para reportes y validación defensiva</li>
+        </ul>
+    </div>
+
+    <div class="tool-section">
+        <h2 class="tool-title">Wireshark</h2>
+        <p class="tool-description">Analizador de protocolos de red para captura y análisis de tráfico.</p>
+        <ul>
+            <li>Captura en tiempo real</li>
+            <li>Filtros avanzados</li>
+            <li>Soporte para múltiples protocolos</li>
+        </ul>
+    </div>
+
+    <div class="tool-section">
+        <h2 class="tool-title">Nmap</h2>
+        <p class="tool-description">Herramienta de escaneo de red para descubrimiento de hosts y servicios.</p>
+        <ul>
+            <li>Escaneo de puertos</li>
+            <li>Detección de sistemas operativos</li>
+            <li>Scripts de detección de vulnerabilidades</li>
+        </ul>
+    </div>
+
+    <div class="tool-section">
+        <h2 class="tool-title">Burp Suite</h2>
+        <p class="tool-description">Plataforma integrada para pruebas de seguridad de aplicaciones web.</p>
+        <ul>
+            <li>Proxy de interceptación</li>
+            <li>Escáner de vulnerabilidades</li>
+            <li>Herramientas de fuzzing</li>
+        </ul>
+    </div>
+
+    <div class="footer">
+        <p>© 2024 HACKER Ético - Todos los derechos reservados</p>
+    </div>
+
+    <script src="whatsapp-float.js"></script>
+</body>
+</html> 
