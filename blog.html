@@ -78,6 +78,40 @@
         .nav a:nth-last-child(-n+2) {
             flex: 0 1 calc(25% - 60px);
         }
+        @media (max-width: 768px) {
+            .nav {
+                padding: 12px 8px;
+                margin-bottom: 18px;
+                gap: 8px;
+                align-items: center;
+            }
+            .nav a,
+            .nav a:nth-last-child(-n+2) {
+                flex: 0 1 calc(33.333% - 8px);
+                min-width: 0;
+                padding: 8px 4px;
+                font-size: 11px;
+                letter-spacing: 1.2px;
+                line-height: 1.2;
+            }
+            .nav a::after {
+                bottom: 0;
+                width: 22px;
+            }
+        }
+        @media (max-width: 420px) {
+            .nav {
+                padding: 10px 6px;
+                gap: 6px;
+            }
+            .nav a,
+            .nav a:nth-last-child(-n+2) {
+                flex-basis: calc(50% - 6px);
+                padding: 7px 3px;
+                font-size: 10px;
+                letter-spacing: 1px;
+            }
+        }
         h1 {
             color: #ffffff;
             text-align: center;
